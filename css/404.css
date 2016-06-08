@@ -1,0 +1,21 @@
+/**
+ * Style for error pages
+ */
+.error-page {
+  padding-top: 80px;
+  min-height: 150px;
+}
+.error-page {
+  padding: 20px 0px 0px;
+}
+.error-page-img {
+  margin: 0 auto 10px auto;
+}
+.col-error-page-info {
+  padding-left: 45px;
+}
+.error-page-desc {
+  max-width: 300px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}s

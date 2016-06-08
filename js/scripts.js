@@ -1,17 +1,4 @@
 $(function($) {
-
-	/**
-	 * Fixed header when page scroll
-	 */
-/*
-	$(window).scroll(function() {
-	    if ($(this).scrollTop()>0) {
-	      $(".navbar-fixed-top").addClass('nav-scroll');
-	    } else {
-	      $(".navbar-fixed-top").removeClass('nav-scroll');
-	    }
-	});
-*/
 	/**
 	 * Insert youtube video with iframe
 	 */
@@ -68,18 +55,6 @@ $(function($) {
 		var linkUp = $('#go_up');
 		$(window).load(function () {
 			setTimeout(function () {
-/*
-				currentPosition = $(this).scrollTop();
-				posBottom = $('.footer').offset().top - 286;
-
-				if (currentPosition > 300 && currentPosition < posBottom) {
-					linkUp.removeAttr('style').css({'display': 'block'});
-				} else if (currentPosition > 300 && currentPosition > posBottom) {
-					linkUp.removeAttr('style').css({'display': 'block'});
-				} else {
-					linkUp.removeAttr('style').css({'display': 'none'});
-				}
-*/
 				$(window).scroll(function () {
 					currentPosition = $(this).scrollTop();
 					posBottom = $('.footer').offset().top - 286;
@@ -233,6 +208,9 @@ $(function($) {
 					//Show success message
 					set_good(true, good_msg);
 
+					//Init Yandex goals
+					yaCounter37702775.reachGoal('feed_back_form');
+
 					//Hide success message
 					setTimeout(set_good, 7000, false, good_msg);
 				} else {
@@ -344,17 +322,23 @@ $(function($) {
 					//Show error from server
 					set_error_s(email_server);
 				}
+			},
+			error: function(obj){
+
+// console.log(obj.statusCode);
+			},
+			statusCode: function(o) {
+				// console.log(o.statusCode);
 			}
 		});
 		return false;
 	});
 });
 
-
 /**
  * Validate Name
  */
-/*function validName(name) {
+function validName(name) {
 	var re = /^[а-яА-яёЁa-zA-Z\s]{2,32}$/;
 	if (re.test(name)) {
 	  return true;
@@ -362,7 +346,7 @@ $(function($) {
 	  return false;
 	}
 }
-*/
+
 /**
  * Validate Email address
  */

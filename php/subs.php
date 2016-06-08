@@ -44,21 +44,21 @@ final class PDOMysqlWork {
 	 * 
 	 * @var string	This is name of Database
 	 */
-	private $_DB_name = 'u196910164_kre';
+	private $_DB_name = 'u196910164_k';
 
 	/**
 	 * _DB_login
 	 * 
 	 * @var string	This is login of user our Database
 	 */
-	private $_DB_login = 'u196910164_kre';
+	private $_DB_login = 'u196910164_k';
 
 	/**
 	 * _DB_password
 	 * 
 	 * @var string	This is password of user our Database
 	 */
-	private $_DB_password = '&i2sVS;rmeuO$9Nqf|';
+	private $_DB_password = 'MnQridBOpsPbKvh2iF';
 
 	/**
 	 * _DB_encoding

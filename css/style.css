@@ -23,18 +23,11 @@ header nav {
 }
 
 header .navbar-fixed-top {
-	/*border-bottom: 1px solid #eee;*/
-	/*background: #f1fbfe;*/
 	background: #fff;
 	opacity: 0.98;
 }
 
 header .navbar-header .logo {
-/*
-	background: url("../img/logo.png") no-repeat;
-	width: 50px;
-	height: 50px;
-*/
 	margin: 0 20px 0 0;
 }
 
@@ -60,7 +53,7 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 
 /** Waves BEGIN **/
 .bg-waves {
-	background: transparent url("../img/waves.jpg") repeat scroll 0% 0%;
+	background: transparent url("../img/waves.png") repeat scroll 0% 0%;
 	height: 15px; 
 	opacity: 0.1;
 	filter: alpha(opacity=10);
@@ -68,14 +61,6 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 /** Waves END **/
 
 /** Presentation BEGIN **/
-.pres {
-	/*background: #d2efff;*/
-	/*background: #d1f2ff;*/
-	/*background: #f1fbfe;*/
-	/*background: #dedede;*/
-	/*border-bottom: 2px solid #eee;*/
-}
-
 .pres .container {
 	padding: 20px 0 0 0;
 }
@@ -106,17 +91,7 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 }
 /** Presentation END **/
 
-
-
 /** Platform BEGIN **/
-
-.platform {
-	/*background: #9bbbb8;*/
-	/*background: #99b9b6;*/
-	/*background: #97b6b3;*/
-	/*border-bottom: 2px solid #eee;*/
-}
-
 .platform .container {
 	padding: 20px 40px;
 }
@@ -129,8 +104,6 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 	padding: 10px 20px;
 }
 /** Platform END **/
-
-
 
 /** Optimization BEGIN **/
 .opt .container {
@@ -150,23 +123,13 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 .opt .container .list-group .list-group-item .btn-danger .badge {
 	font-size: 10px;
 }
-
-
 /** Optimization END **/
 
-
-
 /** News BEGIN **/
-.news {
-	/*border-bottom: 2px solid #eee;*/
-}
-
 .news .container {
 	padding: 20px 20px;
 }
 /** News END **/
-
-
 
 /** Projects BEGIN **/
 .projects {
@@ -178,13 +141,7 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 }
 /** Projects END **/
 
-
-
 /** FAQ BEGIN **/
-.faq {
-	/*border-bottom: 2px solid #eee;*/
-}
-
 .faq .container {
 	padding: 20px 20px;
 }
@@ -194,8 +151,6 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 	font-weight: bold;
 }
 /** FAQ END **/
-
-
 
 /** Contacts BEGIN **/
 .contacts .container {
@@ -220,15 +175,11 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 }
 /** Contacts END **/
 
-
-
 /** Subscribe BEGIN **/
 .subs .container {
 	padding: 20px 20px;
 }
 /** Subscribe END **/
-
-
 
 /** Social BEGIN **/
 .container .footer {
@@ -240,8 +191,6 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 	/*outline: 1px solid #ccc;*/
 }
 /** Social END **/
-
-
 
 /** Arrow "GO UP" BEGIN **/
 .go_up {
@@ -264,7 +213,6 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 	text-decoration: none;
 }
 /** Arrow "GO UP" END **/
-
 
 /** Interrupt Bootstrap styles BEGIN **/
 .navbar-default .navbar-toggle {
@@ -294,6 +242,11 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 .btn-padd-r-sec {
 	padding-right: 189px;
 }
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
 /** Interrupt Bootstrap styles END **/
 
 
@@ -301,7 +254,6 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 /**
  * This is media requests for our devices START
  */
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	.opt .container .list-group .list-group-item .pull-right {
@@ -339,14 +291,35 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 	}
 
 	.opt .container .list-group .list-group-item .btn-danger {
-		padding: 4px 16px;
+		padding: 4px 8px;
+	}
+
+	.contacts .container .row .panel-info .panel-body .form-horizontal .robot {
+		margin-left: 10px;
 	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	.opt .container .list-group .list-group-item .btn-danger {
-		padding: 4px 13px;
+		padding: 4px 10px;
+	}
+
+	.contacts .container .row .panel-info .panel-body .form-horizontal .robot {
+		margin-left: 5px;
+		float: right;
+	}
+}
+
+@media only screen and (max-width : 380px) {
+	.opt .container .list-group .list-group-item .btn-danger {
+		padding: 4px 6px;
+	}
+}
+
+@media only screen and (max-width : 380px) {
+	.opt .container .list-group .list-group-item .btn-danger {
+		padding: 4px 4px;
 	}
 }
 /**
