@@ -40,7 +40,7 @@ $(function($) {
 			opacity: '1',
 			filter: 'alpha(opacity=100)'
 		});
-    	$("html, body").animate({
+    $("html, body").animate({
 			scrollTop: $($(this).attr("href")).offset().top - 60 + "px"
 		}, {
 			duration: 500
@@ -68,7 +68,7 @@ $(function($) {
 				});
 			}, 1000);
 			linkUp.click(function () {
-				$('body,html').animate({scrollTop: 0}, 700);
+				$('body,html').animate({scrollTop: 0}, 300);
 				return false;
 			});
 		});

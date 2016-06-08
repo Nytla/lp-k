@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /basic/
+Disallow: /construction/
+Disallow: /dev/
 Disallow: /css/
 Disallow: /fonts/
 Disallow: /img/
