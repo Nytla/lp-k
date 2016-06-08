@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff2) format('woff2');
+}
+
 body {
 	font-family: "Open Sans", Tahoma, Arial, Verdana, sans-serif;
 	font-size: 20px;
@@ -23,17 +30,33 @@ header .navbar-fixed-top {
 }
 
 header .navbar-header .logo {
+/*
 	background: url("../img/logo.png") no-repeat;
 	width: 50px;
 	height: 50px;
+*/
 	margin: 0 20px 0 0;
+}
+
+header .navbar-header .navbar-brand {
+	padding: 0;
 }
 
 header .navbar-collapse li #download {
 	background: #449d44;
 }
 
+header .navbar-collapse .nav-pills li.navbar-right a {
+	padding:0;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
 
+header .navbar-collapse .nav-pills li.navbar-right a:hover {
+	padding:0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
 
 /** Waves BEGIN **/
 .bg-waves {
@@ -54,16 +77,20 @@ header .navbar-collapse li #download {
 }
 
 .pres .container {
-	padding: 10px 0;
+	padding: 20px 0 0 0;
 }
 
 .pres .jumbotron {
 	background: none;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 
 .pres .img-box {
 	float: left;
-	margin: 25px; 
+	margin: 25px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
 }
 
 .up {
@@ -102,6 +129,30 @@ header .navbar-collapse li #download {
 	padding: 10px 20px;
 }
 /** Platform END **/
+
+
+
+/** Optimization BEGIN **/
+.opt .container {
+	padding: 20px 0;
+}
+
+.opt .container .list-group .row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.opt .container .list-group .list-group-item .btn-danger {
+	padding: 4px;
+	opacity: 0.9;
+}
+
+.opt .container .list-group .list-group-item .btn-danger .badge {
+	font-size: 10px;
+}
+
+
+/** Optimization END **/
 
 
 
@@ -150,6 +201,23 @@ header .navbar-collapse li #download {
 .contacts .container {
 	padding: 20px 20px;
 }
+
+.contacts .container .row .panel-info .panel-body .form-horizontal .alert,
+.subs .container .row .panel-info .panel-body #form-subs .alert {
+	padding: 10px;
+}
+
+.contacts .container .row .panel-info .panel-body .form-horizontal .robot {
+	border: 1px solid #ddd;
+	margin-left: 20px;
+	padding: 0 12px 5px 12px;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; 
+  -moz-border-radius: 3px;
+  opacity: 0.7;
+	filter: alpha(opacity=70);
+}
 /** Contacts END **/
 
 
@@ -163,8 +231,13 @@ header .navbar-collapse li #download {
 
 
 /** Social BEGIN **/
-.container footer p {
-	padding-bottom: 50px;
+.container .footer {
+	/*outline: 1px solid #ccc;*/
+	margin-bottom: 10px;
+}
+
+.container .footer .social {
+	/*outline: 1px solid #ccc;*/
 }
 /** Social END **/
 
@@ -194,8 +267,32 @@ header .navbar-collapse li #download {
 
 
 /** Interrupt Bootstrap styles BEGIN **/
+.navbar-default .navbar-toggle {
+	border-color: #ccc;
+}
+.navbar-toggle {
+	border: 4px solid transparent;
+	padding: 10px 10px;
+	margin-top: 4px;
+	margin-bottom: 0px;
+}
+
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
 	background-color: #31b0d5;
+}
+
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+    margin: 10px 0;
+}
+
+.btn-padd-r-mb {
+	padding-right: 67px;
+}
+
+.btn-padd-r-sec {
+	padding-right: 189px;
 }
 /** Interrupt Bootstrap styles END **/
 
@@ -207,22 +304,50 @@ header .navbar-collapse li #download {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-	
+	.opt .container .list-group .list-group-item .pull-right {
+		/*float: none !important;*/
+	}
+
+	.btn-padd-r-mb {
+		padding-right: 17px;
+	}
+
+	.btn-padd-r-sec {
+		padding-right: 109px;
+	}
+
+	.opt .container .list-group .list-group-item .btn-danger {
+		padding: 4px 11px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.opt .container .list-group .list-group-item .pull-right {
+		float: none !important;
+	}
 
+	.nav > li > a {
+		padding: 10px 8px;	
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
+	.nav > li > a {
+		padding: 10px 8px;	
+	}
 
+	.opt .container .list-group .list-group-item .btn-danger {
+		padding: 4px 16px;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.opt .container .list-group .list-group-item .btn-danger {
+		padding: 4px 13px;
+	}
 }
 /**
  * This is media requests for our devices FINISH
