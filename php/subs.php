@@ -51,14 +51,14 @@ final class PDOMysqlWork {
 	 * 
 	 * @var string	This is login of user our Database
 	 */
-	private $_DB_login = 'u196910164_k';
+	private $_DB_login = '';
 
 	/**
 	 * _DB_password
 	 * 
 	 * @var string	This is password of user our Database
 	 */
-	private $_DB_password = 'MnQridBOpsPbKvh2iF';
+	private $_DB_password = '';
 
 	/**
 	 * _DB_encoding
