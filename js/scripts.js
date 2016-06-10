@@ -313,6 +313,9 @@ $(function($) {
 					//Show success message
 					set_good_s(true, email_good);
 
+					//Init Yandex goals
+					yaCounter37702775.reachGoal('subscribe_form');
+
 					//Hide success message
 					setTimeout(set_good_s, 7000, false, email_good);
 				} else if (object.flag == "double") {
@@ -322,13 +325,6 @@ $(function($) {
 					//Show error from server
 					set_error_s(email_server);
 				}
-			},
-			error: function(obj){
-
-// console.log(obj.statusCode);
-			},
-			statusCode: function(o) {
-				// console.log(o.statusCode);
 			}
 		});
 		return false;

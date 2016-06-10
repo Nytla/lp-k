@@ -9,6 +9,27 @@
  * @author		Igor Zhabskiy <Zhabskiy.Igor@gmail.com>
  */
 
+
+
+class pdoDbException {
+
+		/**
+		 * Constructor
+		 *
+		 * This function initialize connect to our Database
+		 *
+		 * @return object $_DB_connect	This is PDO connect mysql
+		 */
+		public function __construct($e) {
+
+			print_r($e);
+
+		}
+
+} 
+
+
+
 /**
  * PDOMysqlWork
  * 
@@ -30,7 +51,7 @@ final class PDOMysqlWork {
 	 * 
 	 * @var string	This is address of host our Database
 	 */
-	private $_DB_host = 'mysql.hostinger.com.ua';
+	private $_DB_host = '';
 
 	/**
 	 * _DB_port
@@ -44,21 +65,21 @@ final class PDOMysqlWork {
 	 * 
 	 * @var string	This is name of Database
 	 */
-	private $_DB_name = 'u196910164_k';
+	private $_DB_name = '';
 
 	/**
 	 * _DB_login
 	 * 
 	 * @var string	This is login of user our Database
 	 */
-	private $_DB_login = 'u196910164_k';
+	private $_DB_login = '';
 
 	/**
 	 * _DB_password
 	 * 
 	 * @var string	This is password of user our Database
 	 */
-	private $_DB_password = 'MnQridBOpsPbKvh2iF';
+	private $_DB_password = '';
 
 	/**
 	 * _DB_encoding
@@ -141,7 +162,13 @@ final class PDOMysqlWork {
 			/**
 			 * Display error message and return false
 			 */
-			return 'Error: ' . $object -> getMessage();
+			print json_encode(array(
+				"flag" => ($this -> _debug) ? 'Error: ' . $object -> getMessage() : false
+			));
+
+			exit();
+
+			// return 'Error: ' . $object -> getMessage();
 		}
 	}
 
@@ -622,7 +649,7 @@ if ($email_validate == true) {
 	/**
 	 * Chack double email
 	 */
-	$double = $db -> selectOne($table, 'id_email', array('`email_address`' => $email));
+	$double = $db -> selectOne($table, 'id_email', array('email_address' => $email));
 
 	if ($double) {
 		/**
@@ -660,14 +687,14 @@ if ($email_validate == true) {
 	 * Prepare request
 	 */
 	print json_encode(array(
-			"flag" => true
+		"flag" => true
 	));
 } else {
 	/**
 	 * Prepare request
 	 */
 	print json_encode(array(
-			"flag" => false
+		"flag" => false
 	));
 }
 ?>
