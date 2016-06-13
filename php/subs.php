@@ -30,7 +30,7 @@ final class PDOMysqlWork {
 	 * 
 	 * @var string	This is address of host our Database
 	 */
-	private $_DB_host = 'mysql.hostinger.com.ua';
+	private $_DB_host = '';
 
 	/**
 	 * _DB_port
@@ -44,14 +44,14 @@ final class PDOMysqlWork {
 	 * 
 	 * @var string	This is name of Database
 	 */
-	private $_DB_name = 'u196910164_k';
+	private $_DB_name = '';
 
 	/**
 	 * _DB_login
 	 * 
 	 * @var string	This is login of user our Database
 	 */
-	private $_DB_login = 'u196910164_k';
+	private $_DB_login = '';
 
 	/**
 	 * _DB_password

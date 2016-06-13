@@ -113,6 +113,10 @@ header .navbar-collapse .nav-pills li.navbar-right a:hover {
 	padding: 10px 0 20px 0;
 }
 
+.opt .container .list-group li {
+	list-style: none;
+}
+
 .opt .container .list-group .row {
 	margin-right: 0px;
 	margin-left: 0px;
